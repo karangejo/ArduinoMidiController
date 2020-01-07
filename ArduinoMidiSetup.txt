@@ -1,0 +1,18 @@
+# install zipped libraries through the Arduino IDE
+https://github.com/tttapa/MIDI_controller/releases/latest
+https://github.com/PaulStoffregen/Encoder
+
+# install dfu-programmer
+sudo apt-get install dfu-programmer
+
+# might need to change permissions on USB Device
+sudo chmod a+rw /dev/ttyACM0
+
+# change to right directory
+cd ~/Arduino/libraries/MIDI_controller-3.1.1/DFU scripts/Linux
+
+# run the script to become hiduino
+./MIDI\ -\ Arduino-Uno-DFU.sh
+
+# run the script to become arduino again
+./Serial\ -\ Arduino-Uno-DFU.sh 
