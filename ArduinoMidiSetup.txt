@@ -1,6 +1,7 @@
 # install zipped libraries through the Arduino IDE
 https://github.com/tttapa/MIDI_controller/releases/latest
 https://github.com/PaulStoffregen/Encoder
+https://github.com/FortySevenEffects/arduino_midi_library
 
 # install dfu-programmer
 sudo apt-get install dfu-programmer
