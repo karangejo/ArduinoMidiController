@@ -66,6 +66,7 @@ Analog potentiometer(A5, MIDI_CC::Channel_Volume, 6);
 
 // let it run and update!
 void setup() {
+  // set the pull up resistors for the digital pins so we don't need them in the circuit
   for (int i=0; i <= 13; i++){
     pinMode(i,INPUT);
     digitalWrite(i,HIGH);    
