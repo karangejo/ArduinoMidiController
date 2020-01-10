@@ -57,15 +57,20 @@ Digital button(19, S8, 1, velocity);
 // that sends MIDI messages with controller 7 (channel volume) on channel 1
 // might have to change the channel for each pot...
 Analog potentiometer(A0, MIDI_CC::Channel_Volume, 1);
-Analog potentiometer(A1, MIDI_CC::Channel_Volume, 1);
-Analog potentiometer(A2, MIDI_CC::Channel_Volume, 1);
-Analog potentiometer(A3, MIDI_CC::Channel_Volume, 1);
-Analog potentiometer(A4, MIDI_CC::Channel_Volume, 1);
-Analog potentiometer(A5, MIDI_CC::Channel_Volume, 1);
+Analog potentiometer(A1, MIDI_CC::Channel_Volume, 2);
+Analog potentiometer(A2, MIDI_CC::Channel_Volume, 3);
+Analog potentiometer(A3, MIDI_CC::Channel_Volume, 4);
+Analog potentiometer(A4, MIDI_CC::Channel_Volume, 5);
+Analog potentiometer(A5, MIDI_CC::Channel_Volume, 6);
 
 
 // let it run and update!
-void setup() {}
+void setup() {
+  for (int i=0; i <= 13; i++){
+    pinMode(i,INPUT);
+    digitalWrite(i,HIGH);    
+  }
+}
 
 void loop() {
   // Refresh the button (check whether the button's state has changed since last time, if so, send it over MIDI)
